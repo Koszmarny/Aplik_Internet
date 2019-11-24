@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="shortcut icon" href="https://lh3.googleusercontent.com/a-/AAuE7mCNV-c5FoaN1Y6vKhgVV5OTtDe3ToSzr9T1k-vC=s96-cc" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Moja Strona - Pawel Byszewski</title>
+</head>
+<body class="w3-green">
+<div class="w3-bar w3-green w3-xlarge">
+        <span class="w3-bar-item w3-center"> Moja Strona Główna</span>
+</div>
+
+<div class="w3-bar w3-green">
+    <a href="https://www.kopalnia.pl/zwiedzanie/kopalnia-wiedzy/dla-zwiedzajacych/3-najpiekniejsze-widoki-w-polsce-gory-morze-i-podziemia"
+       class="w3-bar-item w3-button w3-hover-white">link 1</a>
+    <a href="http://spowiedz-na-blogu.blogspot.com/2012/08/miejsca-w-polsce.html"
+       class="w3-bar-item w3-button w3-hover-white">link 2</a>
+    <a href="http://wpodrozy24.pl/temat/podroze/najpi%C4%99kniejsza+%C5%82%C4%85ka+w+polsce"
+       class="w3-bar-item w3-button w3-hover-white">link 3</a>
+    <a href="http://matrix.umcs.pl:10111/"
+       class="w3-bar-item w3-button w3-hover-white">Logowanie</a>
+    <a href="http://pbyszews.matrix.umcs.pl/kalendarz.php"
+       class="w3-bar-item w3-button w3-hover-white">Kalendarz</a>
+    <a href="http://pbyszews.matrix.umcs.pl/test.php"
+       class="w3-bar-item w3-button w3-hover-white">Test</a>
+</div>
+
+<div class="w3-container w3-sand w3-center ">
+    <h2>
+        Widoki z miejsc wartych odwiedzenia w wakacje!
+    </h2>
+</div>
+<div class="w3-content w3-display-container w3-center ">
+
+
+    <div class="w3-display-container mySlides">
+        <img src="https://www.kopalnia.pl/files/seo/2018/czerwiec/najpiekniejsze_widoki/kopalnia-soli-wieliczka-kopalnia-wiedzy-3-najpiekniejsze-widoki-700-465-11-07-2018.jpg" style="height: 500px" alt="img1">
+        <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
+            Jezioro w górach-Morskie Oko.
+        </div>
+        <h2>Największe jezioro w górach.</h2>
+    </div>
+
+    <div class="w3-display-container mySlides">
+        <img src="http://i.wp.pl/a/f/jpeg/20350/widok_na_zamek_dunajec_w_niedzicy_i_zamek_czorsztyn1.jpeg" style="height: 500px" alt="img2">
+        <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
+            Zamek w Niedzicy.
+        </div>
+        <h2>Zabytkowy zamek położoyn nad jeziorem</h2>
+    </div>
+
+    <div class="w3-display-container mySlides">
+        <img src="https://bi.im-g.pl/im/07/2c/15/z22201607Q,Hala-Gasienicowa-porosnieta-wierzbowka-kiprzyca-.jpg" style="height: 500px" alt="img3">
+        <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
+            Najpiękniejsza łąka w Polsce-Tatry.
+        </div>
+        <h2> Tatrzańska łąka porośnięta wrzosami</h2>
+    </div>
+
+
+    <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+</div>
+<script>
+    let slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+        let i;
+        let x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = x.length
+        }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+    }
+
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+    }
+</script>
+</body>
+</html>

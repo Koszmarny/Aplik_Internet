@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="shortcut icon"
+          href="https://lh3.googleusercontent.com/a-/AAuE7mCNV-c5FoaN1Y6vKhgVV5OTtDe3ToSzr9T1k-vC=s96-cc"
+          type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Logowanie</title>
+</head>
+
+
+<body class="w3-green">
+<header class="w3-container"></header>
+<div class="w3-bar w3-green">
+    <a href="http://pbyszews.matrix.umcs.pl/Strona.html"
+       class="w3-bar-item w3-button w3-hover-white">Strona główna</a>
+    <a href="http://pbyszews.matrix.umcs.pl/kalendarz.php"
+       class="w3-bar-item w3-button w3-hover-white">Kalendarz</a>
+    <a href="http://pbyszews.matrix.umcs.pl/test.php"
+       class="w3-bar-item w3-button w3-hover-white">Test</a>
+
+</div>
+<div class="w3-container w3-red">
+    {{powitanie}}
+</div>
+<div class="w3-cell-row w3-section" style="width:100%">
+    <div class="w3-container w3-green w3-cell" style="width:40%">
+        {%if not 'login' in session%}
+        <form action="/login" method="POST">
+
+            <input class="w3-input" type="text" placeholder="Login" name="login">
+    </div>
+    <div class="w3-container w3-green w3-cell " style="width:40%">
+
+        <input class="w3-input" type="password" placeholder="Haslo" name="haslo">
+    </div>
+    <div class="w3-container w3-green w3-cell " style="width:20%">
+        <button class="w3-btn w3-red">LOGUJ</button>
+        </form>
+        {%else%}
+        {{powitanie}} Ponownie!
+        <a href="/logout"
+           class="w3-btn w3-red">WYLOGUJ</a>
+
+        <form action="/upload" enctype = "multipart/form-data" method="POST">
+
+
+
+        </form>
+        {%endif%}
+    </div>
+</div>
+<div class="w3-container w3-green">
+
+</div>
+
+<footer class="w3-container w3-red">
+    {{dzisiaj}}
+</footer>
+</body>
+</html>
